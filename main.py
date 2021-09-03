@@ -1,16 +1,37 @@
-# This is a sample Python script.
+message = "Hello strawberry"
+multiline_message = """ This is
+multiline message that
+we can write in one variable
+with three ' """
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print("Hello python")
+print(multiline_message)
+print("len(multiline_message) -> " + str(len(multiline_message)))
+print("message : " + message)
+print("message[0] -> " + message[0])
+print("message[0:5] -> " + message[0:5])
+print("message[:5] -> " + message[:5])
+print("message[6:] -> " + message[6:])
+print("message.lower() -> " + message.lower())
+print("message.count(Hello) -> " + str(message.count('Hello')))
+print("message.count(l) -> " + str(message.count('l')))
+print("message.find('python') -> " + str(message.find('python')))
+print("message.find('s') -> " + str(message.find('s')))
 
+greeting = "Hello"
+name = "senorita"
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+greeting_message = greeting + ', ' + name
+print(greeting_message)
 
+replaced_string = message.replace('strawberry', 'monkey')
+print(replaced_string)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+first_name = "first_name"
+last_name = "last_name"
+dynamic_message = '{}, {}. Welcome'.format(first_name, last_name)
+fstring_message = f'{first_name}, {last_name} . Welcome'
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(dynamic_message + fstring_message)
+print(dir(first_name))
+print(help(str))
