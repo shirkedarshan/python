@@ -1,16 +1,64 @@
-# This is a sample Python script.
+courses = ['History', 'Maths', 'Physics', 'CompScience']
+print(len(courses))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+courses.append('Art')
+courses.insert(0, 'Drawing')
+print(courses)
+print(courses[0])  # starts at 0
+print(courses[-1])  # returns last item
+print(courses[0:2])
+print(courses[:2])
+print(courses[2:])
+print(courses[:])
 
+courses_2 = ['Music', 'PT']
+print(courses)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+courses.extend(courses_2)
+print(courses)
 
+courses.remove('PT')
+print(courses)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+popped = courses.pop()
+print(courses)
+print(popped)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+courses.reverse()
+print(courses)
+courses.sort(reverse=True)
+print(courses)
+
+sorted(courses)  # original version of list
+
+nums = [2, 3, 4]
+print(min(nums))
+print(max(nums))
+print(sum(nums))
+print(courses.insert(0, 'Maths'))
+print('Art' in courses)
+
+for item in courses:
+    print(item)
+
+for index, item in enumerate(nums, start=1):
+    print(index, item)
+
+courses_str = ' - '.join(courses)
+print(courses_str)
+
+new_list = courses_str.split(' - ')
+print(new_list)
+
+# Sets
+courses_set = {'Music', 'History', 'Maths', 'Physics', 'CompScience', 'Maths'}
+fun_courses_set = {'Music', 'Drawing'}
+print(courses_set)
+print('Maths' in courses_set)
+print(courses_set.intersection(fun_courses_set))
+print(courses_set.difference(fun_courses_set))
+print(courses_set.union(fun_courses_set))
+
+empty_list = list()
+empty_tuple = tuple()
+empty_set = set()
