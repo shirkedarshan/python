@@ -1,16 +1,31 @@
-# This is a sample Python script.
+num = 3
+num_float = 3.14
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+print(type(num))
+print(type(num_float))
+print(3 + 2)
+print(3 - 2)
+print(3 * 2)
+print(3 / 2)
+print(3 // 2)
+print(3 ** 2)
+print(3 % 2)
+print(3 * (2 + 1))
 
+num = 1
+num += 10
+print(num)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print(abs(-3))
+print(round(3.75))
+print(round(3.75, 1))
 
+num_1 = 3
+num_2 = 2
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(num_1 != num_2)
+print(num_1 >= num_2)
+print(num_1 <= num_2)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+string_num = '1'
+print(int(string_num) + 1)
