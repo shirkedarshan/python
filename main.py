@@ -1,16 +1,30 @@
-# This is a sample Python script.
+# import my_module
+from my_module import find_index as fi, test
+import sys
+import random
+import math
+import datetime
+import calendar
+import os
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+courses = ['History', 'Maths', 'Physics', 'CompSci']
+# index = find_index(courses, 'Maths')
+index = fi(courses, 'Maths')
 
+print(index)
+print(test)
+print(sys.path)
+print("sys.path.append(('<Actual path of module>')))")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+random_course = random.choice(courses)
+print(random_course)
 
+rads = math.radians(90)
+print(math.sin(rads))
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+today = datetime.date.today()
+print(f"Today : {today}")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(calendar.isleap(2020))
+print(os.getcwd())
+print(os.__file__)
