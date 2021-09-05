@@ -1,16 +1,37 @@
-# This is a sample Python script.
+# object identity -> is
+language = 'python'
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+if language == 'python':
+    print("If condition is true, language is python")
+elif language == 'Java':
+    print("Java is the language")
+else:
+    print("Else condition")
 
+logged_in = True
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+if language == 'python' and logged_in:
+    print("Passed")
+else:
+    print('Bad words')
 
+if not logged_in:
+    print("Please log in")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+a = [1, 2, 3]
+b = [1, 2, 3]
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(a == b)
+print(a is b)
+print(id(a))
+print(id(b))
+
+b = a
+print(a is b)
+
+condition = {}
+
+if condition:
+    print("Evluated to true")
+else:
+    print("Evluated to false")
