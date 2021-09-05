@@ -1,16 +1,45 @@
-# This is a sample Python script.
+nums = [1, 2, 3, 4, 5]
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+for num in nums:
+    if num == 3:
+        print('Found!')
+        break
+    print(num)
 
+for num in nums:
+    if num == 3:
+        print('Found!')
+        continue
+    print(num)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+print("break")
 
+for num in nums:
+    for letter in 'abc':
+        print(num, letter)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print("break")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+for i in range(10):
+    print(i)
+
+print("break")
+
+for i in range(1, 11):
+    print(i)
+
+# while loop
+
+x = 0
+
+while x < 10:
+    if x == 5:
+        break
+    print(x)
+    x += 1
+
+while True:
+    if x == 5:
+        break
+    print(x)
+    x += 1
