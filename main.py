@@ -1,16 +1,47 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+"""
+LEGB
+Local, Enclosing, Global, Built-in
+"""
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+import builtins
+print(dir(builtins))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+x = 'global x'
+print(x)
+
+# def min():
+#     pass
+
+
+m = min([2, 5, 1, 7, 3])
+print(m)
+
+
+def test(z):
+    # global x
+    y = 'local y'
+    x = 'local x'
+    # print(y)
+    print(x)
+    print(z)
+
+
+test('local z')
+# print(y)
+print(x)
+
+
+def outer():
+    x_enclosing = 'outer enclosing x'
+
+    def inner():
+        # nonlocal x_enclosing
+        x_enclosing = 'inner enclosing x'
+        print(x_enclosing)
+
+    inner()
+    print(x_enclosing)
+
+
+outer()
